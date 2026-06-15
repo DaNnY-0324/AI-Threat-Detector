@@ -10,7 +10,7 @@ build/
 venv/
 env/
 
-# Environment
+# Environment — never commit real credentials
 .env
 .env.local
 
@@ -26,3 +26,30 @@ Thumbs.db
 
 # Claude Code
 .claude/
+
+# Datasets — multi-GB training data, download locally per docs/setup
+datasets/
+
+# Model weights — large binary files, regenerate via model/train.py
+model/weights/
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors
+
+# Packet captures — generated at runtime, can be large
+captures/
+*.pcap
+*.pcapng
+
+# Logs
+*.log
+logs/
+
+# Frontend dependencies
+frontend/node_modules/
+node_modules/
+
+# Splunk runtime data (if mounted locally)
+splunk/data/
